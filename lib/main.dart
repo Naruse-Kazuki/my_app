@@ -27,22 +27,18 @@ class MyApp extends StatelessWidget {
                 ],
               ),
             ),
-            child: Row(
+            child: Column(
               children: <Widget>[
-                Expanded(
-                  child: Text("Hello World", textAlign: TextAlign.center),
-                ),
-                Expanded(
-                  child: Text("Second", textAlign: TextAlign.center),
-                ),
+                Text("Hello World", textAlign: TextAlign.center),
+                Text("Second", textAlign: TextAlign.center),
                 Expanded(
                   child: FittedBox(
                     fit: BoxFit.contain,
                     child: const FlutterLogo(),
                   ),
-                )
+                ),
               ],
-            )
+            ),
           ),
 //          Column(
 //            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
