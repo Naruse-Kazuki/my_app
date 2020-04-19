@@ -27,8 +27,11 @@ class MyApp extends StatelessWidget {
                 ],
               ),
             ),
-            child: Text('Hello World'),
-          )
+            child: Text(
+                'Hello World',
+            style: TextStyle(color: Colors.black, fontSize: 20.0),
+            ),
+          ),
 //          Column(
 //            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 //            children:[
