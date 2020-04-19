@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Container(
-            width: 250,
+            width: 400,
             height: 500,
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -27,10 +27,22 @@ class MyApp extends StatelessWidget {
                 ],
               ),
             ),
-            child: Text(
-                'Hello World',
-            style: TextStyle(color: Colors.black, fontSize: 20.0),
-            ),
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                  child: Text("Hello World", textAlign: TextAlign.center),
+                ),
+                Expanded(
+                  child: Text("Second", textAlign: TextAlign.center),
+                ),
+                Expanded(
+                  child: FittedBox(
+                    fit: BoxFit.contain,
+                    child: const FlutterLogo(),
+                  ),
+                )
+              ],
+            )
           ),
 //          Column(
 //            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
