@@ -27,10 +27,17 @@ class MyApp extends StatelessWidget {
               ),
             ),
             child: Container(
-              margin: const EdgeInsets.all(10.0),
+              constraints: BoxConstraints.expand(
+                height: Theme.of(context).textTheme.display1.fontSize * 1.1 + 300.0,
+              ),
+              padding: const EdgeInsets.all(8.0),
               color: Colors.green,
-              width: 50.0,
-              height: 50.0,
+              alignment: Alignment.center,
+              child: Text("Hello World", style: Theme.of(context)
+                .textTheme
+                  .display1
+                  .copyWith(color: Colors.white)),
+              transform: Matrix4.rotationZ(0.1),
             ),
           ),
 //          Column(
