@@ -28,17 +28,20 @@ class MyApp extends StatelessWidget {
               ),
             ),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Text("Hello World", textAlign: TextAlign.center),
-                Text("Second", textAlign: TextAlign.center),
-                Expanded(
-                  child: FittedBox(
-                    fit: BoxFit.contain,
-                    child: const FlutterLogo(),
+                const Text.rich(
+                  TextSpan(
+                    text: "Hello",
+                    children: <TextSpan>[
+                      TextSpan(text: "beautiful", style: TextStyle(fontStyle: FontStyle.italic)),
+                      TextSpan(text: "world", style: TextStyle(fontWeight: FontWeight.bold)),
+                    ],
                   ),
-                ),
+                )
               ],
-            ),
+            )
           ),
 //          Column(
 //            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
