@@ -14,8 +14,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Container(
-            width: 400,
-            height: 500,
+            alignment: Alignment.center,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
@@ -27,21 +26,12 @@ class MyApp extends StatelessWidget {
                 ],
               ),
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                const Text.rich(
-                  TextSpan(
-                    text: "Hello",
-                    children: <TextSpan>[
-                      TextSpan(text: "beautiful", style: TextStyle(fontStyle: FontStyle.italic)),
-                      TextSpan(text: "world", style: TextStyle(fontWeight: FontWeight.bold)),
-                    ],
-                  ),
-                )
-              ],
-            )
+            child: Container(
+              margin: const EdgeInsets.all(10.0),
+              color: Colors.green,
+              width: 50.0,
+              height: 50.0,
+            ),
           ),
 //          Column(
 //            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
